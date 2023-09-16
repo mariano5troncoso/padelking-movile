@@ -13,6 +13,7 @@ const DrawerNavigator = () => {
         
       <Drawer.Screen name='Home' component={StackNavigator} />
       
+      
     </Drawer.Navigator>
   );
 };
