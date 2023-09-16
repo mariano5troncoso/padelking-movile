@@ -1,7 +1,8 @@
 import React from 'react';
-import { StatusBar, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StatusBar, Image, StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { Provider } from 'react';
+import Footer from './Footer';
 const Home = (props) => {
   const bannerData = [
     {
@@ -19,6 +20,7 @@ const Home = (props) => {
   ];
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.NavBar}>
         <TouchableOpacity style={styles.button} onPress={() => props.navigation.toggleDrawer()}>
@@ -43,16 +45,17 @@ const Home = (props) => {
         <TouchableOpacity style={styles.button}>
           <Image source={require('../../assets/CategoryBull.jpg')} style={styles.buttonImage} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Nox')}>
           <Image source={require('../../assets/CategoryNox.jpg')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Image source={require('../../assets/CategorySiux.jpg')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>
-      
+      <Footer/>
       <StatusBar hidden={true} />
     </View>
+    </ScrollView>
   );
 };
 
