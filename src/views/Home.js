@@ -1,13 +1,13 @@
 import React from 'react';
 import { StatusBar, Image, StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import Swiper from 'react-native-swiper';
-import { Provider } from 'react';
 import Footer from './Footer';
+
 const Home = (props) => {
   const bannerData = [
     {
       image: require('../../assets/BannerBull.jpg'),
-      title: '¡Bienvenidos a PaddleKing!',
+      title: '¡Bienvenidos a PADELKING!',
     },
     {
       image: require('../../assets/BannerNox.jpg'),
@@ -21,40 +21,40 @@ const Home = (props) => {
 
   return (
     <ScrollView>
-    <View style={styles.container}>
-      <View style={styles.NavBar}>
-        <TouchableOpacity style={styles.button} onPress={() => props.navigation.toggleDrawer()}>
-          <Image style={styles.LogoMenu} source={require('../../assets/Menu.png')} />
-        </TouchableOpacity>
-        <Image style={styles.LogoPadel} source={require('../../assets/logo.png')} />
-      </View>
-      <View style={styles.bannerContainer}>
-        <Swiper style={styles.carouselContainer} autoplay={true}>
-          {bannerData.map((item, index) => (
-            <View key={index} style={styles.bannerItem}>
-              <Image source={item.image} style={styles.bannerImage} />
-              <Text style={styles.bannerTitle}>{item.title}</Text>
-            </View>
-          ))}
-        </Swiper>
-      </View>
-      <View>
+      <View style={styles.container}>
+        <View style={styles.NavBar}>
+          <TouchableOpacity style={styles.button} onPress={() => props.navigation.toggleDrawer()}>
+            <Image style={styles.LogoMenu} source={require('../../assets/Menu.png')} />
+          </TouchableOpacity>
+          <Image style={styles.LogoPadel} source={require('../../assets/logo.png')} />
+        </View>
+        <View style={styles.bannerContainer}>
+          <Swiper style={styles.carouselContainer} autoplay={true}>
+            {bannerData.map((item, index) => (
+              <View key={index} style={styles.bannerItem}>
+                <Image source={item.image} style={styles.bannerImage} />
+                <Text style={styles.bannerTitle}>{item.title}</Text>
+              </View>
+            ))}
+          </Swiper>
+        </View>
+        <View>
           <Text style={styles.title1}>El arte del pádel, a tu alcance</Text>
+        </View>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button}>
+            <Image source={require('../../assets/CategoryBull.jpg')} style={styles.buttonImage} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Nox')}>
+            <Image source={require('../../assets/CategoryNox.jpg')} style={styles.buttonImage} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Image source={require('../../assets/CategorySiux.jpg')} style={styles.buttonImage} />
+          </TouchableOpacity>
+        </View>
+        <Footer />
+        <StatusBar hidden={true} />
       </View>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Image source={require('../../assets/CategoryBull.jpg')} style={styles.buttonImage} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Nox')}>
-          <Image source={require('../../assets/CategoryNox.jpg')} style={styles.buttonImage} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Image source={require('../../assets/CategorySiux.jpg')} style={styles.buttonImage} />
-        </TouchableOpacity>
-      </View>
-      <Footer/>
-      <StatusBar hidden={true} />
-    </View>
     </ScrollView>
   );
 };
@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
+    
   },
   title1: {
     fontSize: 30,
