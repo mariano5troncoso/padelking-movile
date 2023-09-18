@@ -3,7 +3,6 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { useRoute } from '@react-navigation/native';
 import productsNox1 from '../components/noxProducts';
-import PropTypes from 'deprecated-react-native-prop-types';
 
 const ProductDetails = (props) => {
   const route = useRoute();

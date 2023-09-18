@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   pagos: {
-    flexDirection: 'row', // Para alinear las imágenes en una fila
-    flexWrap: 'wrap', // Para que las imágenes se envuelvan si no caben en la pantalla
+    flexDirection: 'row', 
+    flexWrap: 'wrap', 
   },
   icon: {
-    width: 60, // Define el ancho de las imágenes
-    height: 60, // Define la altura de las imágenes
-    margin: 5, // Agrega margen entre las imágenes
+    width: 60, 
+    height: 60, 
+    margin: 5, 
     objectFit: 'contain'
   },
 });

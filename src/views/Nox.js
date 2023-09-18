@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import productsNox1 from '../components/noxProducts';
 import { useNavigation } from '@react-navigation/native';
-import PropTypes from 'deprecated-react-native-prop-types';
 
 
 
