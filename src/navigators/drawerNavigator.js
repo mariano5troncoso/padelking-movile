@@ -1,6 +1,7 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import StackNavigator from "./stackNavigator"; 
-
+import Home from "../views/Home";
+import Nox from "../views/Nox";
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
@@ -11,7 +12,7 @@ const DrawerNavigator = () => {
         
     }>
         
-      <Drawer.Screen name='Home' component={StackNavigator} />
+      <Drawer.Screen name='Home' component={DrawerNavigator} />
       
       
     </Drawer.Navigator>
