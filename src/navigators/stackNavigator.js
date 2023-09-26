@@ -1,15 +1,26 @@
+import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../views/Home"; 
-import Nox from "../views/Nox";
-import ProductDetails from "../views/Details";
+import HomeScreen from "../views/HomeScreen";
+import Nox from '../views/Nox';
+import Bullpadel from '../views/BullScreen';
+import Siux from '../views/Siux';
+import ProductDetailsScreen from '../views/DetailsScreen';
+import ProductDetailsScreen2 from '../views/DetailsNox';
+import ProductDetailsScreen3 from '../views/DetailsSiux';
+
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Home' component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name='Nox' component={Nox} options={{ headerShown: false }} />
-      <Stack.Screen name= 'Details' component={ProductDetails} options={{ headerShown: false }} />
+      <Stack.Screen name='HomeStack' component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='Nox Productos' component={Nox} options={{ headerShown: false }} />
+      <Stack.Screen name='Bullpadel Productos' component={Bullpadel} options={{ headerShown: false }} />
+      <Stack.Screen name='Siux Productos' component={Siux} options={{ headerShown: false }} />
+      <Stack.Screen name='Detalles Productos' component={ProductDetailsScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='Detalles Nox' component={ProductDetailsScreen2} options={{ headerShown: false }} />
+      <Stack.Screen name='Detalles Siux' component={ProductDetailsScreen3} options={{ headerShown: false }} />
+
     </Stack.Navigator>
   );
 };

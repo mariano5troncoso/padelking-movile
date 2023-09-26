@@ -1,27 +1,25 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import productsNox1 from '../components/noxProducts';
+import productsSiux1 from '../components/siuxProducts';
 import { useNavigation } from '@react-navigation/native';
 
-
-
-const Nox = (props) => {
+const Siux = () => {
   const navigation = useNavigation();
 
   const handleProductDetailsPress = (productId) => {
-    navigation.navigate('Detalles Nox', { productId });
+    navigation.navigate('Detalles Siux', { productId });
   };
 
   return (
     <ScrollView>
       <View style={styles.container}>
-      <View style={styles.NavBar}>
-        <TouchableOpacity style={styles.button} onPress={() => props.navigation.openDrawer()}>
-          <Image style={styles.LogoMenu} source={require('../../assets/Menu.png')} />
-        </TouchableOpacity>
-        <Image style={styles.LogoPadel} source={require('../../assets/logo.png')} />
-      </View>
-        {productsNox1.map((product) => (
+        <View style={styles.NavBar}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.toggleDrawer()}>
+            <Image style={styles.LogoMenu} source={require('../../assets/Menu.png')} />
+          </TouchableOpacity>
+          <Image style={styles.LogoPadel} source={require('../../assets/logo.png')} />
+        </View>
+        {productsSiux1.map((product) => (
           <TouchableOpacity
             key={product._id}
             style={styles.productCard}
@@ -92,4 +90,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Nox;
+export default Siux;

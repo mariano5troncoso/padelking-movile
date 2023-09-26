@@ -1,20 +1,16 @@
+import React from 'react';
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import StackNavigator from "./stackNavigator"; 
-import Home from "../views/Home";
-import Nox from "../views/Nox";
+import StackNavigator from "./stackNavigator";
+import Home from '../views/HomeScreen';
+
+
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator screenOptions={{
-        headerShown:false
-    }
-        
-    }>
-        
-      <Drawer.Screen name='Home' component={DrawerNavigator} />
-      
-      
+    <Drawer.Navigator screenOptions={{ headerShown: false }}>
+      <Drawer.Screen name='PadelKing' component={StackNavigator} />
+      <Drawer.Screen name='Inicio' component={Home} />
     </Drawer.Navigator>
   );
 };
