@@ -1,27 +1,27 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import productsNox1 from '../components/noxProducts';
+import productsBull1 from '../components/bullProducts';
 import { useNavigation } from '@react-navigation/native';
 
 
 
-const Nox = (props) => {
+const Bullpadel = (props) => {
   const navigation = useNavigation();
 
   const handleProductDetailsPress = (productId) => {
-    navigation.navigate('Detalles Nox', { productId });
+    navigation.navigate('Detalles Productos', { productId });
   };
 
   return (
     <ScrollView>
       <View style={styles.container}>
       <View style={styles.NavBar}>
-        <TouchableOpacity style={styles.button} onPress={() => props.navigation.openDrawer()}>
+        <TouchableOpacity style={styles.button} onPress={() => props.navigation.toggleDrawer()}>
           <Image style={styles.LogoMenu} source={require('../../assets/Menu.png')} />
         </TouchableOpacity>
         <Image style={styles.LogoPadel} source={require('../../assets/logo.png')} />
       </View>
-        {productsNox1.map((product) => (
+        {productsBull1.map((product) => (
           <TouchableOpacity
             key={product._id}
             style={styles.productCard}
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   productImage: {
     width: '100%',
-    height: 200,
+    height: 150,
     resizeMode: 'cover',
     borderRadius: 10,
   },
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Nox;
+export default Bullpadel;

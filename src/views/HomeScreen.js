@@ -42,13 +42,13 @@ const Home = (props) => {
           <Text style={styles.title1}>El arte del pádel, a tu alcance</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Bullpadel Productos')}>
             <Image source={require('../../assets/CategoryBull.jpg')} style={styles.buttonImage} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Nox')}>
+          <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Nox Productos')}>
             <Image source={require('../../assets/CategoryNox.jpg')} style={styles.buttonImage} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Siux Productos')}>
             <Image source={require('../../assets/CategorySiux.jpg')} style={styles.buttonImage} />
           </TouchableOpacity>
         </View>
