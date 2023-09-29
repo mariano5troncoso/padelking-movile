@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.9",
     "@react-navigation/drawer": "^6.6.3",
     "@react-navigation/stack": "^6.3.17",
     "deprecated-react-native-prop-types": "^4.2.1",
@@ -22,7 +23,9 @@
     "react-native-reanimated": "~3.3.0",
     "react-native-reanimated-carousel": "^3.5.1",
     "react-native-snap-carousel": "^3.9.1",
-    "react-native-swiper": "^1.6.0"
+    "react-native-swiper": "^1.6.0",
+    "react-redux": "^8.1.2",
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.22.19",

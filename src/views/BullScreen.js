@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import productsBull1 from '../components/bullProducts';
-import { useNavigation } from '@react-navigation/native';
-
-
+import { useNavigation } from '@react-navigation/native'; // Asegúrate de importar useNavigation
 
 const Bullpadel = (props) => {
   const navigation = useNavigation();
