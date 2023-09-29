@@ -7,6 +7,8 @@ import Siux from '../views/Siux';
 import ProductDetailsScreen from '../views/DetailsScreen';
 import ProductDetailsScreen2 from '../views/DetailsNox';
 import ProductDetailsScreen3 from '../views/DetailsSiux';
+import CartPage from '../views/carrito';
+
 
 const Stack = createStackNavigator();
 
@@ -20,7 +22,7 @@ const StackNavigator = () => {
       <Stack.Screen name='Detalles Productos' component={ProductDetailsScreen} options={{ headerShown: false }} />
       <Stack.Screen name='Detalles Nox' component={ProductDetailsScreen2} options={{ headerShown: false }} />
       <Stack.Screen name='Detalles Siux' component={ProductDetailsScreen3} options={{ headerShown: false }} />
-
+      <Stack.Screen name='Store' component={CartPage} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };
