@@ -39,7 +39,7 @@ const Home = (props) => {
           </Swiper>
         </View>
         <View>
-          <Text style={styles.title1}>El arte del pádel, a tu alcance</Text>
+          <Text style={styles.title1}>Nuestras Marcas</Text>
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('Bullpadel Productos')}>
@@ -61,7 +61,7 @@ const Home = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f0f8ff',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

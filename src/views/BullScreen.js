@@ -3,6 +3,7 @@ import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'rea
 import productsBull1 from '../components/bullProducts';
 import { useNavigation } from '@react-navigation/native'; // Asegúrate de importar useNavigation
 
+
 const Bullpadel = (props) => {
   const navigation = useNavigation();
 
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   productCard: {
     width: '48%',
     marginBottom: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#b7d3d7',
     borderRadius: 10,
     padding: 10,
     alignItems: 'center',
