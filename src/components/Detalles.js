@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, Modal, TouchableOpacity } from 'react-native';
 import Footer from '../views/Footer';
-import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
 import { connect } from 'react-redux';
 import { addToCart } from '../redux/actions/cartActions'; // Importa la acción addToCart
+import MyTabs from '../navigators/tabsNavigator';
 
 const Detalles = ({ product, addToCart }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -66,6 +66,7 @@ const Detalles = ({ product, addToCart }) => {
           />
         </View>
       </Modal>
+      <MyTabs/>
       <Footer/>
     </ScrollView>
   );
@@ -137,7 +138,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   addToCartButton: {
-    backgroundColor: '#ff5757',
+    backgroundColor: '#1f4d5c',
     padding: 10,
     borderRadius: 8,
     alignItems: 'center',
